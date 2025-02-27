@@ -1,4 +1,4 @@
-<script setup>
+<!--<script setup>
 import { onMounted, ref } from 'vue'
 import axiosClient from './axiosClient'
 
@@ -34,9 +34,14 @@ const registerNewUser = async () => {
     console.log(err.message)
   }
 }
+</script>-->
+<script>
+import TheHeader from './component/TheHeader.vue';
 </script>
 
 <template>
+  
+  <TheHeader />
   <div class="flex justify-center items-center h-dvh">
     <RouterView />
 

@@ -1,21 +1,32 @@
-import HomeView from '@/pages/HomeView.vue';
-import RegistrationView from '@/pages/RegistrationView.vue';
+import EventHome from '@/pages/EventHome.vue';
+import EventRegistration from '@/pages/EventRegistration.vue';
+import EventLogin from '@/pages/EventLogin.vue';
 import { createRouter, createWebHistory } from 'vue-router';
+import TheHeader from '@/component/TheHeader.vue';
 const routes = [
     {
         path: '/',
         name: 'home',
-        component: HomeView,
+        component: EventHome,
+
     },
     {
         path: '/user/:id', // ✅ Corrected path
         name: 'user-profile',
-        component: () => import('../pages/UserProfile.vue'),
+        component: EventRegistration,
+        props: true,
     },
     {
         path: '/registration',
         name: 'registration',
-        component: RegistrationView,
+        component: EventRegistration,
+        props: true,
+    },
+    {
+        path: '/header',
+        name: 'header',
+        component: TheHeader,
+        props: true,
     },
 
 
