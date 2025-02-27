@@ -1,8 +1,7 @@
 import EventHome from '@/pages/EventHome.vue';
 import EventRegistration from '@/pages/EventRegistration.vue';
-import EventLogin from '@/pages/EventLogin.vue';
 import { createRouter, createWebHistory } from 'vue-router';
-import TheHeader from '@/component/TheHeader.vue';
+
 const routes = [
     {
         path: '/',
@@ -11,21 +10,15 @@ const routes = [
 
     },
     {
-        path: '/user/:id', // ✅ Corrected path
-        name: 'user-profile',
+        path: 'login', // ✅ Corrected path
+        name: 'Signin',
         component: EventRegistration,
         props: true,
     },
     {
         path: '/registration',
-        name: 'registration',
+        name: 'Signup',
         component: EventRegistration,
-        props: true,
-    },
-    {
-        path: '/header',
-        name: 'header',
-        component: TheHeader,
         props: true,
     },
 
